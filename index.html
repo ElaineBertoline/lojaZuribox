@@ -11,55 +11,65 @@
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: #6b4423; }
         .zuri-gold { background-color: #d4a373; }
         .btn-wpp { background-color: #25d366; }
+        .text-zuri { color: #6b4423; }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm py-3">
-        <div class="container mx-auto px-6 flex justify-between items-center">
+    <header class="bg-white/95 backdrop-blur-sm fixed w-full z-50 shadow-sm py-2 md:py-3">
+        <div class="container mx-auto px-4 md:px-6 flex justify-between items-center">
             <div class="flex items-center">
-                <img src="img/LOGOZURI.png" alt="Zuri Box Logo" class="h-20 w-auto">
+                <img src="img/LOGOZURI.png" alt="Zuri Box Logo" class="h-14 md:h-20 w-auto">
             </div>
-            <a href="https://wa.me/5511951640756?text=Olá! Gostaria de encomendar uma cesta exclusiva." class="zuri-gold text-white px-6 py-2.5 rounded-full font-semibold text-xs uppercase tracking-widest hover:scale-105 transition transform">Encomendar</a>
+            <a href="https://wa.me/5511951640756?text=Olá! Vim pelo site e gostaria de encomendar uma cesta." 
+               class="zuri-gold text-white px-4 py-2 md:px-6 md:py-2.5 rounded-full font-semibold text-[10px] md:text-xs uppercase tracking-widest hover:scale-105 transition transform">
+               Encomendar
+            </a>
         </div>
     </header>
 
-    <section class="pt-48 pb-20 px-6 text-center max-w-4xl mx-auto">
-        <span class="text-zuri font-semibold tracking-widest uppercase text-xs opacity-70">Presentes Exclusivos em Cajamar</span>
-        <h2 class="text-5xl md:text-6xl mt-4 mb-6 leading-tight font-bold italic text-zuri">A arte de presentear com elegância.</h2>
-        <p class="text-lg text-gray-600 mb-10 leading-relaxed">Cestas personalizadas com itens premium, criadas para transformar datas especiais em momentos inesquecíveis.</p>
-        <a href="https://wa.me/5511951640756?text=Olá! Gostaria de um orçamento para uma cesta." class="zuri-gold text-white px-10 py-5 rounded-full text-lg font-bold shadow-2xl hover:scale-105 transition transform inline-block uppercase">Garantir minha cesta agora</a>
+    <section class="pt-32 pb-12 md:pt-48 md:pb-20 px-6 text-center max-w-4xl mx-auto">
+        <span class="text-zuri font-semibold tracking-widest uppercase text-[10px] md:text-xs opacity-70">Presentes Exclusivos em Cajamar</span>
+        <h2 class="text-3xl md:text-6xl mt-4 mb-6 leading-tight font-bold italic text-zuri">A arte de presentear com elegância.</h2>
+        <p class="text-base md:text-lg text-gray-600 mb-8 md:mb-10 leading-relaxed">Cestas personalizadas com itens premium, criadas para transformar datas especiais em momentos inesquecíveis.</p>
+        <a href="#catalogo" class="w-full md:w-auto zuri-gold text-white px-8 py-4 md:px-10 md:py-5 rounded-full text-base md:text-lg font-bold shadow-2xl hover:scale-105 transition transform inline-block uppercase">
+            Ver Coleções
+        </a>
     </section>
 
-    <section class="py-20 bg-[#fdfaf7]" id="catalogo">
+    <section class="py-12 md:py-20 bg-[#fdfaf7]" id="catalogo">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-3xl mb-16 uppercase tracking-widest text-zuri">Nossas Coleções</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <h2 class="text-2xl md:text-3xl mb-10 md:mb-16 uppercase tracking-widest text-zuri font-bold">Nossas Coleções</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
                 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group">
-                    <div class="h-96 overflow-hidden">
-                        <img src="img/cestaamor.png" alt="Cesta Amor" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group cursor-pointer" onclick="abrirModal('img/cestaamor.jpg', 'Cesta Amor Exclusiva', 'Vinho Chileno, Queijos Artesanais, Geleia e Chocolates Belgas.')">
+                    <div class="h-72 md:h-96 overflow-hidden">
+                        <img src="img/cestaamor.jpg" alt="Cesta Amor" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold italic">Cesta Amor</h3>
+                        <h3 class="text-xl font-bold italic text-zuri">Cesta Amor</h3>
+                        <p class="text-xs text-gray-400 mt-2 uppercase tracking-widest">Toque para ver detalhes</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group border-2 border-[#d4a373]/20">
-                    <div class="h-96 overflow-hidden">
-                        <img src="img/cestaaniversario.png" alt="Cesta Aniversário" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group border-2 border-[#d4a373]/20 cursor-pointer" onclick="abrirModal('img/cestaaniversario.jpg', 'Cesta Aniversário Premium', 'Bolo Artesanal, Frutas Selecionadas, Suco Gourmet e Balão Personalizado.')">
+                    <div class="h-72 md:h-96 overflow-hidden">
+                        <img src="img/cestaaniversario.jpg" alt="Cesta Aniversário" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold italic">Cesta Aniversário</h3>
+                        <h3 class="text-xl font-bold italic text-zuri">Cesta Aniversário</h3>
+                        <p class="text-xs text-gray-400 mt-2 uppercase tracking-widest">Toque para ver detalhes</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group">
-                    <div class="h-96 overflow-hidden">
-                        <img src="img/cestaformatura.png" alt="Cesta Formatura" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                <div class="bg-white rounded-3xl shadow-lg overflow-hidden group cursor-pointer" onclick="abrirModal('img/cestaformatura.jpg', 'Cesta Formatura & Sucesso', 'Espumante, Taças Personalizadas, Petiscos Gourmet e Cartão de Parabéns.')">
+                    <div class="h-72 md:h-96 overflow-hidden">
+                        <img src="img/cestaformatura.jpg" alt="Cesta Formatura" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
                     </div>
                     <div class="p-6">
-                        <h3 class="text-xl font-bold italic">Cesta Formatura</h3>
+                        <h3 class="text-xl font-bold italic text-zuri">Cesta Formatura</h3>
+                        <p class="text-xs text-gray-400 mt-2 uppercase tracking-widest">Toque para ver detalhes</p>
                     </div>
                 </div>
 
@@ -71,13 +81,52 @@
         <div class="container mx-auto px-6">
             <h3 class="text-2xl mb-4 tracking-widest uppercase font-bold">ZURI BOX</h3>
             <p class="opacity-80 text-sm mb-6 uppercase tracking-widest">Surpreenda quem você ama hoje.</p>
-            <p class="text-xs opacity-60">Cajamar - SP | Entregas em toda a região.</p>
+            <p class="text-[10px] md:text-xs opacity-60 uppercase tracking-tighter">Cajamar - SP | Entregas em toda a região.</p>
         </div>
     </footer>
 
-    <a href="https://wa.me/5511951640756?text=Vim pelo site e gostaria de um orçamento." class="fixed bottom-8 right-8 btn-wpp text-white p-4 rounded-full shadow-2xl z-50 transform hover:scale-110 transition">
+    <div id="modalGaleria" class="fixed inset-0 z-[100] hidden bg-black/90 flex items-center justify-center p-4">
+        <div class="relative max-w-lg w-full bg-white rounded-3xl overflow-hidden shadow-2xl">
+            <button onclick="fecharModal()" class="absolute top-4 right-4 bg-black/50 text-white w-10 h-10 rounded-full flex items-center justify-center text-2xl font-bold z-10">&times;</button>
+            
+            <img id="imagemGrande" src="" class="w-full h-64 md:h-80 object-cover">
+            
+            <div class="p-6 md:p-8 text-center">
+                <h3 id="tituloProduto" class="text-2xl font-bold text-zuri mb-2 italic">Nome do Produto</h3>
+                <p id="descProduto" class="text-gray-600 mb-6 text-sm md:text-base">Descrição dos itens...</p>
+                <a id="linkWpp" href="" class="block w-full bg-[#25d366] text-white py-4 rounded-full font-bold text-lg shadow-lg hover:scale-105 transition transform uppercase tracking-widest">
+                    Pedir via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a href="https://wa.me/5511951640756" class="fixed bottom-6 right-6 btn-wpp text-white p-4 rounded-full shadow-2xl z-50 transform hover:scale-110 transition">
         <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
+
+    <script>
+        function abrirModal(src, titulo, desc) {
+            const modal = document.getElementById('modalGaleria');
+            const img = document.getElementById('imagemGrande');
+            const h3 = document.getElementById('tituloProduto');
+            const p = document.getElementById('descProduto');
+            const link = document.getElementById('linkWpp');
+            
+            img.src = src;
+            h3.innerText = titulo;
+            p.innerText = desc;
+            link.href = `https://wa.me/5511951640756?text=Olá! Gostaria de pedir a ${titulo} que vi no site.`;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Trava o scroll do fundo
+        }
+
+        function fecharModal() {
+            document.getElementById('modalGaleria').classList.add('hidden');
+            document.body.style.overflow = 'auto'; // Destrava o scroll
+        }
+    </script>
 
 </body>
 </html>
